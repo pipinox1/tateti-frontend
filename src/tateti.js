@@ -19,9 +19,13 @@ class Square extends Component {
     }
 }
 class Reset extends Component {
+    restartGame(event) {
+        window.location.reload();
+      }
+
     render() {
         return (
-            <button id="reset-button">Reiniciar Tablero</button>
+            <button id="reset-button" onClick={ this.restartGame.bind(this)}>Reiniciar Tablero</button>
         )
     }
 }
